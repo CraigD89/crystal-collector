@@ -41,3 +41,8 @@ img{
 button {
     border: none;
 }
+
+#targetScore{
+    font-size: 40px;
+
+}
