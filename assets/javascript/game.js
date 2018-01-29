@@ -1,20 +1,4 @@
-//Random number for target score
-var targetScore = Math.floor(Math.random() * (120 - 19)) + 19;
-$("#targetScore").text(targetScore);
-console.log("Target score is ", targetScore);
 
-//Crystal button values
-var crystalButton1 = Math.floor(Math.random() * (12 - 1)) + 1;
-console.log("Button 1 is ", crystalButton1);
-
-var crystalButton2 = Math.floor(Math.random() * (12 - 1)) + 1;
-console.log("Button 2 is ", crystalButton2);
-
-var crystalButton3 = Math.floor(Math.random() * (12 - 1)) + 1;
-console.log("Button 3 is ", crystalButton3);
-
-var crystalButton4 = Math.floor(Math.random() * (12 - 1)) + 1;
-console.log("Button 4 is ", crystalButton4);
 
 //Wins / losses
 var wins = 0;
@@ -30,6 +14,25 @@ $("#userScore").text(userScore);
 
 // Game functions go here - starts from the beginning when user wins or loses
 var gameStart = function () {
+
+
+  //Random number for target score
+  var targetScore = Math.floor(Math.random() * (120 - 19)) + 19;
+  $("#targetScore").text(targetScore);
+  console.log("Target score is ", targetScore);
+
+  //Crystal button values
+  var crystalButton1 = Math.floor(Math.random() * (12 - 1)) + 1;
+  console.log("Button 1 is ", crystalButton1);
+
+  var crystalButton2 = Math.floor(Math.random() * (12 - 1)) + 1;
+  console.log("Button 2 is ", crystalButton2);
+
+  var crystalButton3 = Math.floor(Math.random() * (12 - 1)) + 1;
+  console.log("Button 3 is ", crystalButton3);
+
+  var crystalButton4 = Math.floor(Math.random() * (12 - 1)) + 1;
+  console.log("Button 4 is ", crystalButton4);
 
 
   //Update userScore on click
@@ -50,6 +53,7 @@ var gameStart = function () {
 
   //If / else statements to determine win or loss
   if (userScore > targetScore) {
+    $("#userScore").addClass("red");
     alert("YOU LOST");
     $("#losses").add(+1);
     //push +1 to loss 
