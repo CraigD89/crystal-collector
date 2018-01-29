@@ -5,9 +5,6 @@ console.log("Target score is ", targetScore);
 
 //Crystal button values
 var crystalButton1 = Math.floor(Math.random() * (12 - 1)) + 1;
-// $("#crystalButton1").text(crystalButton1);
-// $("#crystalButton1").on("click", updateScore); - to be used later
-// $("#crystalButton1").click(crystalButton1); - creates an error
 console.log("Button 1 is ", crystalButton1);
 
 var crystalButton2 = Math.floor(Math.random() * (12 - 1)) + 1;
@@ -19,33 +16,66 @@ console.log("Button 3 is ", crystalButton3);
 var crystalButton4 = Math.floor(Math.random() * (12 - 1)) + 1;
 console.log("Button 4 is ", crystalButton4);
 
+//Wins / losses
+var wins = 0;
+$("#wins").text(wins);
+
+var losses = 0;
+$("#losses").text(losses);
 
 //User's score
-// var userScore = 0
+var userScore = 0
+$("#userScore").text(userScore);
+
+
+// Game functions go here - starts from the beginning when user wins or loses
+var gameStart = function () {
+
+
+  //Update userScore on click
+  $("#crystalButton1").click(function () {
+    // var crystal1val = +($(this).attr(crystalButton1)); - more condensed option?
+    var crystal1val = ($(this).attr("#crystalButton1")); //Something here isn't working! .find?
+    crystal1val = parseInt(crystal1val);
+    userScore += crystal1val;
+    //Push updated score to screen
+    //$(this).data("")
+    console.log("Updated score is ", userScore);
+
+  });
+
+  //
+  //Copy above for each button
+  //
+
+  //If / else statements to determine win or loss
+  if (userScore > targetScore) {
+    alert("YOU LOST");
+    $("#losses").add(+1);
+    //push +1 to loss 
+  }
+
+  else if (userScore === targetScore) {
+    alert("YOU WIN!");
+    $("#wins").add(+1);
+    //push +1 to win 
+  };
 
 
 
 
-// var gameStart = function () {
 
-//   // $("#crystalButton1").click(updateScore); - when user clicks the crystal it adds to userScore
+  //End of game - RESTART
+};
 
-
-// };
-
-// gameStart();
-
-
-// //Option for random number genrator
-// <script>
-//   function getRndInteger(min, max) {
-//    return Math.floor(Math.random() * (120 - 19)) + 19;
-// }
-// </script>
+gameStart();
 
 
 
-// JS gone over in class
+
+
+
+// JS from in class review
 // var rand = [4, 5, 7, 8];
 
 // var clickAction = function () {
