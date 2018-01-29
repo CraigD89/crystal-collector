@@ -6,9 +6,9 @@ body{
 }
 
 h1{
-    font-size: 40px;
+    font-size: 50px;
     padding: 50px;
-
+    font-weight: bold;
 }
 
 p{
@@ -38,12 +38,14 @@ p{
 }
 
 img{
-    width: 150px;
+    width: 110px;
     padding: 10px;
 }
 
 button {
+    outline: none;
     border: none;
+    background-color: transparent;
 }
 
 #targetScore{
@@ -58,4 +60,8 @@ button {
 
 #winsLosses{
     font-size: 50px;
+}
+
+red{
+    color: red;
 }
