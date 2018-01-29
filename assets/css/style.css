@@ -15,6 +15,10 @@ p{
     font-size: 20px;
 }
 
+#gameDescription{
+    padding-bottom: 40px;
+}
+
 #randomNum{
     padding: 50px;
 }
@@ -43,6 +47,15 @@ button {
 }
 
 #targetScore{
-    font-size: 40px;
+    font-size: 50px;
 
+}
+
+#userScore{
+    font-size: 50px;
+
+}
+
+#winsLosses{
+    font-size: 50px;
 }

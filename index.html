@@ -22,30 +22,40 @@
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 
                     <h1>CRYSTAL COLLECTOR</h1>
-
-                    <p>You will be given a random number at the start of the game.</p>
-                    <p> There are four crystals below. By clicking on a crystal, you will will add a specific amount of points
-                        to your total score.</p>
-                    <p> You win the game by matching your total score to the random number. You will lose the game if your total
-                        score goes above the random number.</p>
-                    <p> The value of each crystal is hidden from you until you click on it.</p>
-                    <p> Each time the game starts, the game will change the values of each crystal.</p>
-
+                    <div id="gameDescription">
+                        <p>You will be given a random number at the start of the game.</p>
+                        <p> There are four crystals below. By clicking on a crystal, you will will add a specific amount of points
+                            to your total score.</p>
+                        <p> You win the game by matching your total score to the random number. You will lose the game if your
+                            total score goes above the random number.</p>
+                        <p> The value of each crystal is hidden from you until you click on it.</p>
+                        <p> Each time the game starts, the game will change the values of each crystal.</p>
+                    </div>
                 </div>
             </div>
 
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                    <div id="targetScore">
-                        <!-- <p>(Random number goes here)</p> -->
-                    </div>
+                    <p>Target Score:
+                        <div id="targetScore">
+                        </div>
+                    </p>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                    <div id="wins">
-                        <p>Wins:</p>
-                    </div>
-                    <div id="losses">
-                        <p>Losses:</p>
+                    <div id="winsLosses">
+
+                        <p>Wins:
+                            <div id="wins"></div>
+                        </p>
+
+                        <!-- add logic to append win count -->
+
+                        <p>Losses:
+                            <div id="losses">
+                        </p>
+
+                        <!-- add logic to append loss count -->
+                        </div>
                     </div>
                 </div>
             </div>
@@ -54,16 +64,16 @@
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                     <span id="gems">
                         <button id="crystalButton1">
-                            <img src="assets/images/blue-crystal.png" alt="alexandrite">
+                            <img src="assets/images/blue-crystal.png" alt="blue crystal">
                         </button>
                         <button id="crystalButton2">
-                            <img src="assets/images/green-crystal.png" alt="blue sapphire">
+                            <img src="assets/images/green-crystal.png" alt="green crystal">
                         </button>
                         <button id="crystalButton3">
-                            <img src="assets/images/purple-crystal.png" alt="citrine">
+                            <img src="assets/images/purple-crystal.png" alt="purple crystal">
                         </button>
                         <button id="crystalButton4">
-                            <img src="assets/images/red-crystal.png" alt="ruby">
+                            <img src="assets/images/red-crystal.png" alt="red crystal">
                         </button>
                     </span>
                 </div>
@@ -75,7 +85,7 @@
             </div>
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                    <p>currentScore</p>
+                    <div id="userScore"></div>
                 </div>
             </div>
 
