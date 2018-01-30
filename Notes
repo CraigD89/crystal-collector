@@ -3,12 +3,14 @@
 Issues
 - When crystal is clicked, I recieve "NaN" in console log
     - Can't move forward in the game until this is resolved
+- Nest if win/lose statement into click function ???
 
 To Do
 - Fix crystal click += userScore
 - Test win/loss functions
 - Make sure the game keeps looping after win/loss
 - Possibly change crystal numbers to an array rather than a randomly generated number
+- Organize CSS with classes instead of properties for every single thing
 
 Notes
 - I have a better understanding of declaring variables or functions within each other
