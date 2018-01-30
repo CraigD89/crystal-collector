@@ -32,7 +32,7 @@ var gameStart = function () {
   var crystalButton3 = Math.floor(Math.random() * (12 - 1)) + 1;
   $("#crystalButton3").attr("data-value", crystalButton3);
   console.log("Button 3 is ", crystalButton3);
-  
+
   var crystalButton4 = Math.floor(Math.random() * (12 - 1)) + 1;
   $("#crystalButton4").attr("data-value", crystalButton4);
   console.log("Button 4 is ", crystalButton4);
@@ -40,36 +40,85 @@ var gameStart = function () {
 
   //Update userScore on click
   $("#crystalButton1").click(function () {
-    // var crystal1val = +($(this).attr(crystalButton1)); - more condensed option?
-   
-    var crystal1val = $(this).attr("data-value") //Something here isn't working! .find?
+
+    //Push crystal values to total score
+    var crystal1val = $(this).attr("data-value");
     console.log(crystal1val, "this is crystal 1")
     crystal1val = parseInt(crystal1val);
     userScore += crystal1val;
     $("#userScore").text(userScore);
-    //Push updated score to screen
-    //$(this).data("")
-    console.log("Updated score is ", userScore);
 
+    if (userScore > targetScore) {
+      alert("YOU LOST");
+      +$("#losses").val() + 1; //NOT WORKING
+      var losses = $("#losses").val();
+      losses = losses + 1;
+    }
+    else if (userScore === targetScore) {
+      alert("YOU WIN!");
+    };
   });
 
-  //
-  //Copy above for each button
-  //
+  $("#crystalButton2").click(function () {
 
-  //If / else statements to determine win or loss
-  if (userScore > targetScore) {
-    $("#userScore").addClass("red");
-    alert("YOU LOST");
-    $("#losses").add(+1);
-    //push +1 to loss 
-  }
+    //Push crystal values to total score
+    var crystal2val = $(this).attr("data-value");
+    console.log(crystal2val, "this is crystal 2")
+    crystal2val = parseInt(crystal2val);
+    userScore += crystal2val;
+    $("#userScore").text(userScore);
 
-  else if (userScore === targetScore) {
-    alert("YOU WIN!");
-    $("#wins").add(+1);
-    //push +1 to win 
-  };
+    if (userScore > targetScore) {
+      alert("YOU LOST");
+      +$("#losses").val() + 1; //NOT WORKING
+      var losses = $("#losses").val();
+      losses = losses + 1;
+    }
+    else if (userScore === targetScore) {
+      alert("YOU WIN!");
+    };
+  });
+
+  $("#crystalButton3").click(function () {
+
+    //Push crystal values to total score
+    var crystal3val = $(this).attr("data-value");
+    console.log(crystal3val, "this is crystal 3")
+    crystal3val = parseInt(crystal3val);
+    userScore += crystal3val;
+    $("#userScore").text(userScore);
+
+    if (userScore > targetScore) {
+      alert("YOU LOST");
+      +$("#losses").val() + 1; //NOT WORKING
+      var losses = $("#losses").val();
+      losses = losses + 1;
+    }
+    else if (userScore === targetScore) {
+      alert("YOU WIN!");
+    };
+  });
+
+
+  $("#crystalButton4").click(function () {
+
+    //Push crystal values to total score
+    var crystal4val = $(this).attr("data-value");
+    console.log(crystal4val, "this is crystal 4")
+    crystal4val = parseInt(crystal4val);
+    userScore += crystal4val;
+    $("#userScore").text(userScore);
+
+    if (userScore > targetScore) {
+      alert("YOU LOST");
+      +$("#losses").val() + 1; //NOT WORKING
+      var losses = $("#losses").val();
+      losses = losses + 1;
+    }
+    else if (userScore === targetScore) {
+      alert("YOU WIN!");
+    };
+  });
 
 
 

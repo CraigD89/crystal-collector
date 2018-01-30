@@ -4,6 +4,7 @@ Issues
 - When crystal is clicked, I recieve "NaN" in console log
     - Can't move forward in the game until this is resolved
 - Nest if win/lose statement into click function ???
+- Needs more DRY code in JS
 
 To Do
 - Fix crystal click += userScore
