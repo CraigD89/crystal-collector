@@ -37,24 +37,22 @@ var gameStart = function() {
   $("#crystalButton1").click(function() {
     //Push crystal values to total score
     var crystal1val = $(this).attr("data-value");
-    console.log(crystal1val, "this is crystal 1");
     crystal1val = parseInt(crystal1val);
     userScore += crystal1val;
     $("#userScore").text(userScore);
 
+    //Win / Loss criteria
     if (userScore > targetScore) {
       alert("YOU LOST");
-      // +$("#losses").val() + 1; //NOT WORKING
-      // var losses = $("#losses").val();
-      // losses = losses + 1;
-
-      losses = $(this).attr("data-value");
-      losses = parseInt(losses);
       losses++;
-      $("#losses").text(losses); //Something is broken here - adding large num to loss
+      $("#losses").text(losses);
+      
     } else if (userScore === targetScore) {
       alert("YOU WIN!");
+      wins++;
+      $("#wins").text(wins);
     }
+    
   });
 
   // $("#crystalButton2").click(function() {
@@ -112,14 +110,10 @@ var gameStart = function() {
   // });
 
   //End of game - RESTART
+
 };
 
 gameStart();
-
-
-
-
-
 
 // JS from in class review
 // var rand = [4, 5, 7, 8];
