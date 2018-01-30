@@ -1,15 +1,14 @@
 (Pseudo-code is in my flowchart in the References folder)
 
 Issues
-- Nest if win/lose statement into click function - ???
 - Needs more DRY code in JS
-- When user loses, adds random number to losses
+    - Made a side JS file for cleaner code practice
+- When user loses, adds random number to losses (FIXED)
 
 To Do
 X - Fix crystal click += userScore
-- Test win/loss functions
+X - Test win/loss functions
 - Make sure the game keeps looping after win/loss
-- Possibly change crystal numbers to an array rather than a randomly generated number
 - Organize CSS with classes instead of properties for every single thing
 
 Notes
