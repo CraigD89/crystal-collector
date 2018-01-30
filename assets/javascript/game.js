@@ -15,7 +15,6 @@ $("#userScore").text(userScore);
 // Game functions go here - starts from the beginning when user wins or loses
 var gameStart = function () {
 
-
   //Random number for target score
   var targetScore = Math.floor(Math.random() * (120 - 19)) + 19;
   $("#targetScore").text(targetScore);
@@ -23,24 +22,31 @@ var gameStart = function () {
 
   //Crystal button values
   var crystalButton1 = Math.floor(Math.random() * (12 - 1)) + 1;
+  $("#crystalButton1").attr("data-value", crystalButton1);
   console.log("Button 1 is ", crystalButton1);
 
   var crystalButton2 = Math.floor(Math.random() * (12 - 1)) + 1;
+  $("#crystalButton2").attr("data-value", crystalButton2);
   console.log("Button 2 is ", crystalButton2);
 
   var crystalButton3 = Math.floor(Math.random() * (12 - 1)) + 1;
+  $("#crystalButton3").attr("data-value", crystalButton3);
   console.log("Button 3 is ", crystalButton3);
-
+  
   var crystalButton4 = Math.floor(Math.random() * (12 - 1)) + 1;
+  $("#crystalButton4").attr("data-value", crystalButton4);
   console.log("Button 4 is ", crystalButton4);
 
 
   //Update userScore on click
   $("#crystalButton1").click(function () {
     // var crystal1val = +($(this).attr(crystalButton1)); - more condensed option?
-    var crystal1val = ($(this).attr("#crystalButton1")); //Something here isn't working! .find?
+   
+    var crystal1val = $(this).attr("data-value") //Something here isn't working! .find?
+    console.log(crystal1val, "this is crystal 1")
     crystal1val = parseInt(crystal1val);
     userScore += crystal1val;
+    $("#userScore").text(userScore);
     //Push updated score to screen
     //$(this).data("")
     console.log("Updated score is ", userScore);
