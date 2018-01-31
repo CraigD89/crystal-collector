@@ -1,15 +1,19 @@
-(Pseudo-code is in my flowchart in the References folder)
+(Pseudo-code is in my flowchart image inside the References folder)
 
 Issues
 - Needs more DRY code in JS
-    - Made a side JS file for cleaner code practice
+    - Randomly generated number across all crystal buttons in fewer lines of code - rather than separate commands for each individual crystal
+        - Apply above to crystals in resetGame function
 - When user loses, adds random number to losses (FIXED)
+- Reset game on win or loss (FIXED)
 
 To Do
 X - Fix crystal click += userScore
 X - Test win/loss functions
-- Make sure the game keeps looping after win/loss
+X - Make sure the game keeps looping after win/loss
 - Organize CSS with classes instead of properties for every single thing
 
 Notes
-- I have a better understanding of declaring variables or functions within each other
+- I have a better understanding of declaring variables or functions within each other when needed
+- I spent a lot of time breaking down my JS code to understand the order to make the whole site fully functional and cohesive
+- I will apply what I learned throughout this assignment to fix up my hangman game
