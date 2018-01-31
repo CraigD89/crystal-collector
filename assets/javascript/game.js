@@ -11,30 +11,27 @@ $(document).ready(function() {
   var userScore = 0;
   $("#userScore").text(userScore);
 
-
-
   //Random number for target score
   var targetScore = Math.floor(Math.random() * (120 - 19 + 1)) + 19;
   $("#targetScore").text(targetScore);
-  console.log("Target score is ", targetScore);
+  // console.log("Target score is ", targetScore);
 
   //Crystal button values
   var crystalButton1 = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
   $("#crystalButton1").attr("data-value", crystalButton1);
-  console.log("Button 1 is ", crystalButton1);
+  // console.log("Button 1 is ", crystalButton1);
 
   var crystalButton2 = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
   $("#crystalButton2").attr("data-value", crystalButton2);
-  console.log("Button 2 is ", crystalButton2);
+  // console.log("Button 2 is ", crystalButton2);
 
   var crystalButton3 = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
   $("#crystalButton3").attr("data-value", crystalButton3);
-  console.log("Button 3 is ", crystalButton3);
+  // console.log("Button 3 is ", crystalButton3);
 
   var crystalButton4 = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
   $("#crystalButton4").attr("data-value", crystalButton4);
-  console.log("Button 4 is ", crystalButton4);
-
+  // console.log("Button 4 is ", crystalButton4);
 
   // Game functions go here - starts from the beginning when user wins or loses
   function resetGame() {
@@ -43,46 +40,38 @@ $(document).ready(function() {
 
     crystalButton1 = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
     $("#crystalButton1").attr("data-value", crystalButton1);
-    console.log("Button 1 is ", crystalButton1);
-
+    // console.log("Button 1 is ", crystalButton1);
 
     crystalButton2 = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
     $("#crystalButton1").attr("data-value", crystalButton2);
-    console.log("Button 2 is ", crystalButton2);
-
+    // console.log("Button 2 is ", crystalButton2);
 
     crystalButton3 = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
     $("#crystalButton1").attr("data-value", crystalButton3);
-    console.log("Button 3 is ", crystalButton3);
-
+    // console.log("Button 3 is ", crystalButton3);
 
     crystalButton4 = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
     $("#crystalButton1").attr("data-value", crystalButton4);
-    console.log("Button 4 is ", crystalButton4);
+    // console.log("Button 4 is ", crystalButton4);
 
-
-    userScore = 0
+    userScore = 0;
     $("#userScore").text(userScore);
-
-
   };
 
-  //
-  function loser(){
+  //WIN / LOSS functions
+  function loser() {
     alert("YOU LOSE");
     losses++;
     $("#losses").text(losses);
     resetGame();
-  }
+  };
 
-  function winner(){
+  function winner() {
     alert("YOU WIN");
     wins++;
     $("#wins").text(wins);
     resetGame();
-  }
-
-
+  };
 
   //Update userScore on click
   $("#crystalButton1").click(function() {
@@ -129,7 +118,6 @@ $(document).ready(function() {
     }
   });
 
-
   $("#crystalButton4").click(function() {
     var crystal4val = parseInt($(this).attr("data-value"));
     userScore += crystal4val;
@@ -141,10 +129,6 @@ $(document).ready(function() {
       winner();
     }
   });
-
-
-  //Copy above for each button
- 
 
   //End of game - RESTART
 });
