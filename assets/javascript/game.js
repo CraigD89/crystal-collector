@@ -1,13 +1,10 @@
-//Document get ready
 $(document).ready(function() {
-  //Wins / losses
+ 
+  //Wins / losses / user's current score
   var wins = 0;
   $("#wins").text(wins);
-
   var losses = 0;
   $("#losses").text(losses);
-
-  //User's score
   var userScore = 0;
   $("#userScore").text(userScore);
 
@@ -33,8 +30,9 @@ $(document).ready(function() {
   $("#crystalButton4").attr("data-value", crystalButton4);
   // console.log("Button 4 is ", crystalButton4);
 
-  // Game functions go here - starts from the beginning when user wins or loses
+  // Restart game function goes here - starts from the beginning when user wins or loses
   function resetGame() {
+
     targetScore = Math.floor(Math.random() * (120 - 19 + 1)) + 19;
     $("#targetScore").text(targetScore);
 
@@ -80,15 +78,15 @@ $(document).ready(function() {
     userScore += crystal1val;
     $("#userScore").text(userScore);
 
-    //Win + Loss criteria
+    //Win or Loss criteria
     if (userScore > targetScore) {
       loser();
-      // alert("YOU LOST");
+      // alert("YOU LOST"); - this is older code where I was having issues
       // losses++;
       // $("#losses").text(losses);
     } else if (userScore === targetScore) {
       winner();
-      // alert("YOU WIN!");
+      // alert("YOU WIN!"); - older code that had issues
       // wins++;
       // $("#wins").text(wins);
     }
